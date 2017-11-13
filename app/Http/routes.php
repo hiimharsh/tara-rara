@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +21,11 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/blogs', 'PagesController@blogs');
 
 Route::get('/blogs/{id}', 'PagesController@blogsShow');
+=======
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', 'PagesController@index');
+>>>>>>> 09477b30104124f1c96934b8ba767b8760e3bbd8
