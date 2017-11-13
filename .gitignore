@@ -6,3 +6,5 @@ Homestead.json
 .env
 .env.example
 composer.lock
+.DS_Store
+**/.DS_Store
