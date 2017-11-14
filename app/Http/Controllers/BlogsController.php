@@ -14,6 +14,11 @@ class BlogsController extends Controller
 {
     //
 
+    public function __constructor () {
+        $this->middleware('auth', ['only' => ['create', 'store']]);
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
     # index function
     public function index () {
         $blogs = Blog::latest()->get();
@@ -24,6 +29,12 @@ class BlogsController extends Controller
     public function show ($id) {
         $blog = Blog::findOrFail($id);
         return view('blogs.show')->with('blog', $blog);
+    }
+
+    # edit function
+    public function edit ($id) {
+        $blog = Blog::findOrFail($id);
+        return view('blogs.edit')->with('blog', $blog);
     }
 
     # create function
