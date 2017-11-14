@@ -17,6 +17,13 @@ Route::get('/', function () {
 
 Route::get('/contact', 'PagesController@contact');
 
-Route::get('/blogs', 'PagesController@blogs');
+# Blogs routes
+// Route::get('/blogs', 'PagesController@blogs');
+// Route::get('/blogs', ['as' => 'blogs.index', 'uses' => 'PagesController@blogs']);
 
-Route::get('/blogs/{id}', 'PagesController@blogsShow');
+// Route::get('/blogs/create', 'PagesController@blogsCreate');
+
+// Route::get('/blogs/{id}', 'PagesController@blogsShow');
+
+#Blogs new routes
+Route::resource('blogs', 'BlogsController');

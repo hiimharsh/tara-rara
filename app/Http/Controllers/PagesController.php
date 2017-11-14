@@ -22,11 +22,15 @@ class PagesController extends Controller
     public function blogs () {
       $blogs = Blog::all();
 
-      return view('blogs', compact('blogs'));
+      return view('blogs.index', compact('blogs'));
     }
 
     public function blogsShow ($id) {
       $blog = Blog::findOrFail($id);
       return view('blogs.show')->with('blog', $blog);
+    }
+
+    public function blogsCreate () {
+      return view('blogs.create');
     }
 }
