@@ -52,18 +52,17 @@ class BlogsController extends Controller
     }
 
     # update function
-    public function update () {
-
-    }
-
-    # edit function
-    public function edit () {
-
+    public function update (BlogRequest $request, $id) {
+        $blog = Blog::findOrFail($id);
+        $blog->update($request->all());
+        return redirect('blogs');
     }
 
     # destroy function
-    public function destroy () {
-
+    public function destroy ($id) {
+        // delete blog
+        Blog::destroy($id);
+        return redirect('blogs');
     }
 
 }
