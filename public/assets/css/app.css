@@ -5731,6 +5731,9 @@ button.close {
     display: none !important; } }
 
 .margin-top {
-  margin-top: 50px; }
+  margin-top: 60px; }
+
+form {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=app.css.map */

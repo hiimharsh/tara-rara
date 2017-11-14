@@ -19,18 +19,7 @@ class PagesController extends Controller
       return view('contact', compact('people'));
     }
 
-    public function blogs () {
-      $blogs = Blog::all();
-
-      return view('blogs.index', compact('blogs'));
-    }
-
-    public function blogsShow ($id) {
-      $blog = Blog::findOrFail($id);
-      return view('blogs.show')->with('blog', $blog);
-    }
-
-    public function blogsCreate () {
-      return view('blogs.create');
-    }
+    public function blogs () {}
+    public function blogsShow ($id) {}
+    public function blogsCreate () {}
 }
