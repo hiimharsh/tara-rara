@@ -65,4 +65,12 @@ class BlogsController extends Controller
         return redirect('blogs');
     }
 
+
+    // API SECTION
+
+    public function all() {
+        $blog = Blog::all();
+        return $blog;
+    }
+
 }
