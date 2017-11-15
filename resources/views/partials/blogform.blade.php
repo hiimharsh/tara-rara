@@ -10,4 +10,5 @@
 
 <div class="form-group">
   {!! Form::submit($submitButton, ['class' => 'btn btn-primary']) !!}
+  <a href="{{ url()->previous() }}"><button type="button" class="btn btn-primary">Cancel</button></a>
 </div>

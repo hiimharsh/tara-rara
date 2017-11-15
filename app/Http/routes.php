@@ -30,6 +30,11 @@ Route::get('/contact', 'PagesController@contact');
 #Blogs new routes
 Route::resource('blogs', 'BlogsController');
 
+Route::get('admin', ['middleware' => 'admin', function () {
+    $blogs = [];
+    return view('blogs.index', compact('blogs'));
+}]);
+
 
 // Authentication routes..
 Route::get('auth/login', ['as' => 'login', 'uses' => 'Auth\AuthController@getLogin']);
